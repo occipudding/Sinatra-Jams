@@ -1,3 +1,8 @@
 <h2><%= @artist.name %></h2>
 <h3><%= @artist.age %></h3>
 <h3><%= @artist.bio %></h3>
+
+<form action="/artist/<%= @artist.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Artist">
+</form>
